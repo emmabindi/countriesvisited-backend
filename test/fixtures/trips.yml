@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  country: MyString
+  activities: MyString
+  highlights: MyString
+  year: 1
+
+two:
+  country: MyString
+  activities: MyString
+  highlights: MyString
+  year: 1
