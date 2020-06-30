@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'countries/index', to: "countries#index"
+  get 'countries/show', to: "countries#show"
   # resources :trips
 
   get "/trips", to: "trips#index"
