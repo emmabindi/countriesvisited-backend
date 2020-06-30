@@ -1,11 +1,11 @@
 Rails.application.routes.draw do
   # resources :trips
 
-  get "/", to: "trips#index"
+  get "/trips", to: "trips#index"
   get "/trips/:id", to: "trips#show"
-  post "/create", to: "trips#create"
-  put "/trips/:id/edit", to: "trips#update"
-  patch "/trips/:id/edit", to: "trips#update"
+  post "/trips/create", to: "trips#create"
+  put "/trips/:id", to: "trips#update"
+  patch "/trips/:id", to: "trips#update"
   delete "/trips/:id", to: "trips#destroy"
 
   # post "/login", to: "user_token#create"
