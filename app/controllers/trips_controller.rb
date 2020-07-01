@@ -1,8 +1,9 @@
 class TripsController < ApplicationController
+  before_action :authenticate_user
   before_action :set_trip, only: [:show, :update, :destroy]
 
   def index
-    trips = Trip.all.order(id: "desc")
+    trips = current_user.trips.order(id: "desc")
     render json: trips
   end
 
@@ -11,9 +12,8 @@ class TripsController < ApplicationController
   end 
 
   def create
-    Trip.create(trip_params)
+    current_user.trips.create(trip_params)
     render json: "Trip added", status: 201
-
   end
 
   def update
