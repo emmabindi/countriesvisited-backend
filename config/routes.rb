@@ -1,5 +1,8 @@
 Rails.application.routes do
   post "/login", to: "user_token#create"
+  post "/sign-up", to: "users#create"
+  get "/status", to: "status#index"
+  get "/status/user", to: "status#user"
   # get 'countries/index', to: "countries#index"
   # get 'countries/show', to: "countries#show"
   # resources :trips
@@ -10,8 +13,4 @@ Rails.application.routes do
   put "/trips/:id", to: "trips#update"
   patch "/trips/:id", to: "trips#update"
   delete "/trips/:id", to: "trips#destroy"
-
-  get "/random", to: "user_token#random"
-  get "/status", to: "status#index"
-  get "/status/user", to: "status#user"
 end
