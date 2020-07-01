@@ -1,4 +1,7 @@
-Rails.application.routes.draw do
+Rails.application.routes do
+  post "/login", to: "user_token#create"
+  # get 'countries/index', to: "countries#index"
+  # get 'countries/show', to: "countries#show"
   # resources :trips
 
   get "/trips", to: "trips#index"
@@ -8,7 +11,7 @@ Rails.application.routes.draw do
   patch "/trips/:id", to: "trips#update"
   delete "/trips/:id", to: "trips#destroy"
 
-  # post "/login", to: "user_token#create"
-  # get "/status", to: "status#index"
-  # get "/status/user", to: "status#user"
+  get "/random", to: "user_token#random"
+  get "/status", to: "status#index"
+  get "/status/user", to: "status#user"
 end
