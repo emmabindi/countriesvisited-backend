@@ -6,4 +6,23 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-Trip.create(country:"Russia", activities: "Overnight train, ballet & opera shows, shopping and historical sightseeing", highlights: "The late night wine bars and architecture", year: 2015, photo: "https://media.gettyimages.com/photos/saint-basil-cathedral-moscow-in-summer-copy-space-russia-picture-id806298260?s=612x612")
+User.create(email:"e@gmail.com", password: "111111")
+
+User.create(email:"l@gmail.com", password: "111111")
+
+Trip.create(
+  country:"Russia", 
+  activities: "Overnight train, ballet & opera shows, shopping and historical sightseeing", 
+  highlights: "The late night wine bars and architecture", 
+  year: 2015, 
+  photo: "https://media.gettyimages.com/photos/saint-basil-cathedral-moscow-in-summer-copy-space-russia-picture-id806298260?s=612x612", 
+  user_id: 2)
+
+Trip.create(
+  country:"Sri Lanka", 
+  activities: "Visiting tea plantations and hikes to waterfalls", 
+  highlights: "Misty early mornings at Ella", 
+  year: 2015, 
+  photo: "https://static2.bigstockphoto.com/5/0/3/large1500/305376514.jpg", 
+  user_id: 1)
+
