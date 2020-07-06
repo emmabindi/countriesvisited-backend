@@ -1,11 +1,14 @@
+# frozen_string_literal: true
+
 class UsersController < ApplicationController
   def create
     User.create(user_params)
-    render json: "User created", status: 200
+    render json: 'User created', status: 200
   end
 
   private
+
   def user_params
-    params.require(:user).permit(:email, :password)
+    params.require(:user).permit(:email, :password, :name)
   end
 end
